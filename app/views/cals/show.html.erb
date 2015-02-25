@@ -1,0 +1,16 @@
+  <div class="page-header">
+   <i><h1>Customer Details</h1></i>
+  </div>
+     <h4><i>Custonmer Name : </i><%= @cal.customer_name %></h4>
+     <h4><i>Opening Date : </i><%= @cal.opening_date%></h4>
+     <h4><i>Rate Of Interest : </i><%= @cal.roi%></h4>
+     <h4><i>Amount : </i><%= @cal.amount%></h4>
+     <h4><i>Transcation Type : </i><%= @cal.transaction_type%></h4>
+     <h4><i>Jewel Details : </i><%= @cal.jewel_detail%></h4>
+     <h4><i>Gross Weight : </i><%= @cal.gross_weight%></h4>
+     <h4><i>Net Weight : </i><%= @cal.net_weight%></h4>
+     <h4><i>Appraised Amount : </i><%= @cal.appraised_amount%></h4>
+
+    <%= link_to "Back",cals_path, class: "btn btn-primary" %> 
+
+    <%= link_to "Close account",cals_close_path(:id => @cal.id), class: "btn btn-primary" %>    

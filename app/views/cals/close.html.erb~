@@ -1,0 +1,17 @@
+<div class="page-header">
+<i><h1>Close Account</h1></i>
+</div>
+     <h4><i>Customer Name : </i><%= @cal.customer_name %></h4>
+     <h4><i>Opening Date : </i><%= @cal.opening_date%></h4>
+     <h4><i>Rate Of Interest : </i><%= @cal.roi%></h4>
+     <h4><i>Amount : </i><%= @cal.amount%></h4>
+     <h4><i>Transcation type : </i><%= @cal.transaction_type%></h4>
+     <h4><i>Closing date : </i><%= @cal.closing_date%></h4>
+     <h4><i>No of days : </i><%= @cal.no_of_days%></h4>
+     <h4><i>Amount due : </i><%= @cal.amount_due%></h4>
+
+    <%= link_to "Back",cals_path, class: "btn btn-primary" %> <br />
+
+    <%= form_for @cal, url: cal_path(@cal), :html => { :method => :put } do |f| %>
+  <%= f.submit "close", class: "btn btn-danger"  %>
+   <% end %>

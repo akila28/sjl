@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sjl</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://js.stripe.com/v1/" %>
+  <%= csrf_meta_tags %>
+</head>
+
+  <body>
+    <div class="container-narrow">
+     <div id="header">
+      <%= render 'layouts/header' %>
+     </div>
+     <div class="container">
+      <% flash.each do |key, value| %>
+      <br /><br />
+     <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+          <div id="footer">
+
+      </div>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  opening_date: 2015-02-13
+  roi: 1.5
+  amount: 1
+  transaction_type: MyString
+  jewel_detail: MyString
+  gross_weight: 1.5
+  net_weight: 1.5
+  appraised_amount: 1
+  no_of_days: 2015-02-13
+  closing_date: 2015-02-13
+
+two:
+  customer_name: MyString
+  opening_date: 2015-02-13
+  roi: 1.5
+  amount: 1
+  transaction_type: MyString
+  jewel_detail: MyString
+  gross_weight: 1.5
+  net_weight: 1.5
+  appraised_amount: 1
+  no_of_days: 2015-02-13
+  closing_date: 2015-02-13

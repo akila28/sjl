@@ -1,0 +1,80 @@
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 10px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
+/* table */
+
+th{
+
+   border:1px solid #C0C0C0;
+   color:#00008B
+}
+
+td{
+   border:1px solid #C0C0C0;
+}
+
+/* customer line */
+.customer{
+   border-bottom: 2.5px solid rgb(0,136,204);
+}
+
+/* homepage*/
+h5,h4,h3,h2,h1
+{
+font-family: info;
+font-weight: bold;
+line-height: 30px;
+color: info;
+}
+ 
+/* h1 */
+h1
+{
+color: #00008B;
+
+}
+
+/* h4 */
+h4
+{
+color: #FF1493;
+
+}
+
+/* label */
+label.required:after{
+content: " *";
+color: red;
+cursor: help;
+}
+
+
+

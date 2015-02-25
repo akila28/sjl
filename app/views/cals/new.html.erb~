@@ -1,0 +1,48 @@
+<i><h1> New Jl</h1></i>
+
+<%= form_for(@cal) do |f| %>
+
+<% if @cals.blank? %>
+
+<% else %>
+
+
+<% @cals.each do |f| %>
+<li><%= error %></li>
+  <% end %>
+  </ul>
+ <% end %>
+
+<h4><i>
+<%= f.label :customer_name %>
+<%= f.text_field :customer_name %><br />
+
+<%= f.label :opening_date %>
+<%= f.text_field :opening_date %><br />
+
+<%= f.label :roi %>
+<%= f.text_field :roi %><br />
+
+<%= f.label :amount %>
+<%= f.text_field :amount %><br />
+
+<%= f.label :transaction_type %>
+<%= f.text_field :transaction_type %><br />
+
+<%= f.label :jewel_detail %>
+<%= f.text_field :jewel_detail %><br />
+
+<%= f.label :gross_weight %>
+<%= f.text_field :gross_weight %><br />
+
+<%= f.label :net_weight %>
+<%= f.text_field :net_weight %><br />
+
+<%= f.label :appraised_amount %>
+<%= f.text_field :appraised_amount %><br /></i></h4>
+
+<%= f.submit "Create", class: "btn btn-info" %>
+
+ <% end %>
+
+

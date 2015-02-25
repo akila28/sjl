@@ -1,0 +1,46 @@
+
+<div align= "center"><i><h1>Special jl </h1></i></div>
+ 
+<br /><br />
+
+
+<div> <table cellpadding = "5px" cellspacing = "5px" width = "100%" class="table">
+ 
+  <h4><tr class="info">
+    <th><i>CUSTOMER NAME</i></th>
+    <th><i>OPENING DATE</i></th>
+    <th><i>RATE OF INTEREST</i></th>
+    <th><i>AMOUNT</i></th>
+    <th><i>TRANSACTION TYPE</i></th>
+    <th><i>JEWEL DETAILS</i></th>
+    <th><i>GROSS WEIGHT</i></th>
+    <th><i>NET WEIGHT</i></th>
+    <th><i>APPRAISED AMOUNT</i></th>
+    <th><i>DELETE</i></th>
+    <th><i>STATUS</i></th>
+  </tr>
+
+  <% @cals.each do |cal| %>
+
+    <tr>
+     <td><%= link_to "#{cal.customer_name}" , cal_path(cal)%></td>
+     <td><%= cal.opening_date%></td>
+     <td><%= cal.roi%></td>
+     <td><%= cal.amount%></td>
+     <td><%= cal.transaction_type%></td>
+     <td><%= cal.jewel_detail%></td>
+     <td><%= cal.gross_weight%></td>
+     <td><%= cal.net_weight%></td>
+     <td><%= cal.appraised_amount%></td>    
+     <td><%= link_to "Delete",cal_path(cal),
+      method: :delete, confirm: "Are You Sure?" %></td>  
+   </tr></h4></div>
+  <% end %>
+ </table>
+ <%= link_to "Open New JL", new_cal_path,class: "btn btn-primary btn-block" %>
+
+</div>
+
+
+
+

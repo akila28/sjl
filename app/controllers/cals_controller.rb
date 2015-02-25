@@ -1,0 +1,65 @@
+class CalsController < ApplicationController
+
+def new
+@cal = Cal.new
+end
+
+
+def create
+  @cal = Cal.new cal_params
+   if @cal.save 
+     flash[:success] = "hello!"
+     redirect_to cal_path(@cal)  
+   else
+     flash[:alert] = "wrong value"
+     render 'new'
+  end           
+end
+
+def index
+  @cals = Cal.all
+end 
+
+def edit
+  @cal = Cal.find(params[:id])
+end
+
+def update
+  @cal = Cal.find(params[:id])
+   if @cal.update_attributes(params[:cal])
+    flash[:success] = "updated successfully"
+    redirect_to cals_path(@cal)
+    else
+    flash[:alert] = "failed"
+    render 'edit'
+   end
+end
+
+
+def show
+  @cal = Cal.find(params[:id])
+end
+ 
+def destroy
+  @cal = Cal.find(params[:id])
+  @cal.destroy
+  flash[:notice] = "cal has been deleted"
+  redirect_to cals_path
+end
+
+ def close
+   @cal = Cal.find(params[:id])
+   flash[:notice] = "customer has been deleted"
+ end
+
+ def activate
+  @cal = Cal.find(params[:id])
+  @cal.update_attributes!(:status => 'closed')
+  redirect_to close_cal_path(@cal)
+  end 
+
+def cal_params
+ params.require(:cal).permit(:customer_name, :opening_date, :roi, :amount, :transaction_type, :jewel_detail, :gross_weight, :net_weight, :appraised_amount, :no_of_days, :closing_date, :amount_due, :status)
+ end
+
+end
